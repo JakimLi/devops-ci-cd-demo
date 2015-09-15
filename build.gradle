@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE"
+    }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-rest:1.2.5.RELEASE'
+
+    testCompile 'junit:junit:4.3'
+}
